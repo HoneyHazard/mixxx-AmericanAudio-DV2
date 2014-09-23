@@ -290,6 +290,14 @@
                 </options>
             </control>
         </controls>
-        <outputs/>
+        <outputs>
+            <output>
+                <group>[Channel1]</group>
+                <key>filterHighKill</key>
+                <status>0x90</status>
+                <midino>0x01</midino>
+                <minimum>1.0</minimum>
+            </output>
+        </outputs>
     </controller>
 </MixxxControllerPreset>

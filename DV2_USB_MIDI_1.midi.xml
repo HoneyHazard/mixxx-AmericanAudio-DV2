@@ -1,6 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <MixxxControllerPreset mixxxVersion="" schemaVersion="1">
-    <info/>
+    <info>
+        <name>American Audio DV2</name>
+        <author>Sergey Butylkov</author>
+        <description>Controller preset for American Audio DV2 2-channel mixer</description>
+        <forums>TODO</forums>
+        <wiki>TODO</wiki>
+    </info>
     <controller id="DV2">
         <scriptfiles/>
         <controls>

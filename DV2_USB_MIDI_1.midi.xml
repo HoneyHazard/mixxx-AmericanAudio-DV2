@@ -8,7 +8,9 @@
         <wiki>TODO</wiki>
     </info>
     <controller id="DV2">
-        <scriptfiles/>
+        <scriptfiles>
+            <file functionprefix="AmericanAudioDV2" filename="AmericanAudio-DV2-scripts.js"/>
+        </scriptfiles>
         <controls>
             <control>
                 <group>[Channel1]</group>
@@ -292,60 +294,60 @@
         </controls>
         <outputs>
             <output>
+                <group>[Channel2]</group>
+                <key>filterLowKill</key>
+                <status>0x91</status>
+                <midino>0x06</midino>
+                <minimum>1</minimum>
+            </output>
+            <output>
                 <group>[Channel1]</group>
                 <key>filterHighKill</key>
                 <status>0x90</status>
                 <midino>0x01</midino>
-                <minimum>1.0</minimum>
+                <minimum>1</minimum>
             </output>
             <output>
                 <group>[Channel1]</group>
                 <key>filterMidKill</key>
                 <status>0x90</status>
                 <midino>0x02</midino>
-                <minimum>1.0</minimum>
-            </output>
-            <output>
-                <group>[Channel1]</group>
-                <key>filterLowKill</key>
-                <status>0x90</status>
-                <midino>0x03</midino>
-                <minimum>1.0</minimum>
-            </output>
-            <output>
-                <group>[Channel2]</group>
-                <key>filterHighKill</key>
-                <status>0x91</status>
-                <midino>0x04</midino>
-                <minimum>1.0</minimum>
-            </output>
-            <output>
-                <group>[Channel2]</group>
-                <key>filterMidKill</key>
-                <status>0x91</status>
-                <midino>0x05</midino>
-                <minimum>1.0</minimum>
-            </output>
-            <output>
-                <group>[Channel2]</group>
-                <key>filterLowKill</key>
-                <status>0x91</status>
-                <midino>0x06</midino>
-                <minimum>1.0</minimum>
+                <minimum>1</minimum>
             </output>
             <output>
                 <group>[Channel1]</group>
                 <key>pfl</key>
                 <status>0x90</status>
                 <midino>0x09</midino>
-                <minimum>1.0</minimum>
+                <minimum>1</minimum>
             </output>
             <output>
                 <group>[Channel2]</group>
                 <key>pfl</key>
                 <status>0x91</status>
                 <midino>0x0A</midino>
-                <minimum>1.0</minimum>
+                <minimum>1</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>filterHighKill</key>
+                <status>0x91</status>
+                <midino>0x04</midino>
+                <minimum>1</minimum>
+            </output>
+            <output>
+                <group>[Channel2]</group>
+                <key>filterMidKill</key>
+                <status>0x91</status>
+                <midino>0x05</midino>
+                <minimum>1</minimum>
+            </output>
+            <output>
+                <group>[Channel1]</group>
+                <key>filterLowKill</key>
+                <status>0x90</status>
+                <midino>0x03</midino>
+                <minimum>1</minimum>
             </output>
         </outputs>
     </controller>

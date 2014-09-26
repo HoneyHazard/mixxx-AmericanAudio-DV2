@@ -1,7 +1,11 @@
 function AmericanAudioDV2() {}
 
+// when true volume levels for master left and right channels are shown by the volume LEDs
+// when false volume for left and right decks are shown instead
 AmericanAudioDV2.masterVolumeMode = true;
-AmericanAudioDV2.initFlashCounter = 6;
+
+// counter used for initial flashing of the volume levels[A
+AmericanAudioDV2.initFlashCounter = 8;
 
 AmericanAudioDV2.init = function (id) 
 {
@@ -11,7 +15,7 @@ AmericanAudioDV2.init = function (id)
     // setup a timer to flash volume levels a few times upon startup
     // to indicate we are up and running!
     AmericanAudioDV2.initFlashTimerID 
-        = engine.beginTimer(300, "AmericanAudioDV2.initFlashTimerHandler");
+        = engine.beginTimer(500, "AmericanAudioDV2.initFlashTimerHandler");
 }
 
 AmericanAudioDV2.toggleVolumeMode = function(channel, control, value) 
@@ -25,12 +29,14 @@ AmericanAudioDV2.toggleVolumeMode = function(channel, control, value)
 
 AmericanAudioDV2.updateLeftVolume = function (value) 
 {
+    // input range is [0, 1]
     // output range is [0, 10]
     midi.sendShortMsg(0x90, 0x0F, value * 10);
 }
 
 AmericanAudioDV2.updateRightVolume = function (value) 
 {
+    // input range is [0, 1]
     // output range is [0, 10]
     midi.sendShortMsg(0x91, 0x10, value * 10);
 }
@@ -61,14 +67,17 @@ AmericanAudioDV2.updateVolumeMode = function()
 AmericanAudioDV2.initFlashTimerHandler = function() 
 {
     if (AmericanAudioDV2.initFlashCounter % 2 == 0) {
+        // flash "on"
         AmericanAudioDV2.updateLeftVolume(1);
         AmericanAudioDV2.updateRightVolume(1);
     } else {
+        // flash "off"
         AmericanAudioDV2.updateLeftVolume(0);
         AmericanAudioDV2.updateRightVolume(0);
     }
     --AmericanAudioDV2.initFlashCounter;
-    if (AmericanAudioDV2.initFlashCounter == 0) {
+    if (AmericanAudioDV2.initFlashCounter <= 0) {
+        // stop flashing
         engine.stopTimer(AmericanAudioDV2.initFlashTimerID);
     }
 }

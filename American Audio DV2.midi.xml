@@ -4,8 +4,7 @@
         <name>American Audio DV2</name>
         <author>Sergey Butylkov</author>
         <description>Controller preset for American Audio DV2 2-channel mixer</description>
-        <forums>TODO</forums>
-        <wiki>TODO</wiki>
+        <forums>http://mixxx.org/forums/viewtopic.php?t=6644</forums>
     </info>
     <controller id="DV2">
         <scriptfiles>

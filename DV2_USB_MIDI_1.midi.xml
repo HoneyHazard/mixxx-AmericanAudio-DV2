@@ -291,6 +291,15 @@
                     <normal/>
                 </options>
             </control>
+            <control>
+                <group>[Master]</group>
+                <key>AmericanAudioDV2.toggleVolumeMode</key>
+                <status>0x90</status>
+                <midino>0x07</midino>
+                <options>
+                    <Script-Binding />
+                </options>  
+            </control>
         </controls>
         <outputs>
             <output>

@@ -9,7 +9,7 @@
     </info>
     <controller id="DV2">
         <scriptfiles>
-            <file functionprefix="AmericanAudioDV2" filename="AmericanAudio-DV2-scripts.js"/>
+            <file functionprefix="AmericanAudioDV2" filename="American-Audio-DV2-scripts.js"/>
         </scriptfiles>
         <controls>
             <control>

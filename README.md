@@ -15,4 +15,4 @@ Version 0.1 released 9/26/2014:
 Installation
 =======================
 
-Copy the files into controller mapper file folder, as specified in the wiki: http://mixxx.org/wiki/doku.php/midi_controller_mapping_file_format
+Copy the files into controller mapping files folder, as specified in the wiki: http://mixxx.org/wiki/doku.php/midi_controller_mapping_file_format

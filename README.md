@@ -16,3 +16,5 @@ Installation
 =======================
 
 Copy the files into controller mapping files folder, as specified in the wiki: http://mixxx.org/wiki/doku.php/midi_controller_mapping_file_format
+
+(Re)start Mixxx, American Audio DV2 will appear in the controller dropdown selection
